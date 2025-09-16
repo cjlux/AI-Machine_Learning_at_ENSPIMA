@@ -1,0 +1,3 @@
+La présence de caractères accentués dans un fichier
+ASCII peut poser des problèmes pour la restitution 
+graphique des caractères.

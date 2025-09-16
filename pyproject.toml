@@ -1,0 +1,19 @@
+[project]
+name = "AI-ML-at-ENSPIMA"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "imageio>=2.37.0",
+    "jupyterlab>=4.4.6",
+    "marimo>=0.13.10",
+    "matplotlib>=3.10.3",
+    "opencv-python>=4.11.0.86",
+    "pathlib>=1.0.1",
+    "pydot>=4.0.0",
+    "ruff>=0.11.10",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+    "tensorflow==2.16.*",
+]

@@ -1,0 +1,21 @@
+name: pyml
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - tensorflow==2.9.*             # best reproductibility
+  - pandas
+  - matplotlib
+  - opencv
+  - imageio
+  - jupyter
+  - notebook
+  - nbclassic
+  - scikit-learn
+  - seaborn
+  - pydot
+  - pydotplus
+  - pip
+  - pip:
+    - wget
+    
