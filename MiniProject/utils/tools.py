@@ -6,7 +6,7 @@ import pandas as pd
 from seaborn import heatmap
 from sklearn.metrics import confusion_matrix
     
-def plot_loss_accuracy(history):
+def plot_loss_accuracy(history, acc_min=0.8):
     '''Plot training & validation loss & accuracy values, giving an argument
        'history' of type 'tensorflow.python.keras.callbacks.History'. '''
     
@@ -14,8 +14,14 @@ def plot_loss_accuracy(history):
     ax1 = plt.subplot(1,2,1)
     if history.history.get('accuracy'):
         ax1.plot(np.array(history.epoch)+1, history.history['accuracy'], 'o-',label='Train')
+        y_min = np.array(history.history['accuracy']).min()
+        if y_min < acc_min: acc_min = y_min
     if history.history.get('val_accuracy'):
         ax1.plot(np.array(history.epoch)+1, history.history['val_accuracy'], 'o-', label='Test')
+        y_min = np.array(history.history['val_accuracy']).min()
+        if y_min < acc_min: acc_min = y_min
+    _, acc_max = ax1.get_ylim()
+    ax1.set_ylim(acc_min, acc_max)
     ax1.set_title('Model accuracy')
     ax1.set_ylabel('Accuracy')
     ax1.set_xlabel('Epoch') 
@@ -28,6 +34,8 @@ def plot_loss_accuracy(history):
         ax2.plot(np.array(history.epoch)+1, history.history['loss'], 'o-', label='Train')
     if history.history.get('val_loss'):
         ax2.plot(np.array(history.epoch)+1, history.history['val_loss'], 'o-',  label='Test')
+    _, loss_max = ax2.get_xlim()
+    ax2.set_xlim(0, loss_max)
     ax2.set_title('Model loss')
     ax2.set_ylabel('Loss')
     ax2.set_xlabel('Epoch')
@@ -54,7 +62,8 @@ def plot_images(image_array:np.ndarray, R:int, C:int, r:int=0,
         im = image_array[r+i]
         if reverse: im = 255 - im
         plt.imshow(im, cmap='gray')
-        plt.axis('off');
+        plt.axis('off')
+    plt.show()
 
 
 def show_cm(true, results, classes):
