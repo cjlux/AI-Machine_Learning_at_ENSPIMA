@@ -15,5 +15,5 @@ dependencies = [
     "ruff>=0.11.10",
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
-    "tensorflow==2.16.*",
+    "tensorflow==2.18.*",
 ]
