@@ -1,4 +1,4 @@
-# AI-Machine_Learning_at_ENSPIMA  
+# AI-ML_at_ENSPIMA  
 (September 2025)
 
 ## Goals
