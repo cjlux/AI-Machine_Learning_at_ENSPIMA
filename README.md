@@ -1,9 +1,9 @@
 # AI-ML_at_ENSPIMA  
-(September 2025)
+(September 2026)
 
 ## Goals
 
-The main objective of this module is the introduction to Artificial Intelligence through some of its main  components: **Machine Learning** (ML), **Neural Networks** (NN) and **Deep Learning** (DL).
+The main objective of this module is the introduction to Artificial Intelligence through some of its main  components: **Machine Learning** (ML) and **Deep Learning** (DL) with the , **Neural Networks** (NN).
 
 The main classes of problems addressed by ML & DL are exposed, with their principles, tools and limits of use, in the field of engineering. Programming, training and operating a neural network is illustrated from a practical point of view in Python language with the *tensorflow* and *keras* Python modules.
 
